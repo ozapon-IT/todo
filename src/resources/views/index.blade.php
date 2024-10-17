@@ -6,13 +6,23 @@
 
 @section('content')
 <div class="todo__alert">
-  {{-- @isset ($message) --}}
+  {{-- フラッシュセッション --}}
   @if (session('message'))
   <div class="todo__alert--success">
-    {{-- Todo: {{ $message }}を作成しました --}}
     {{ session('message') }}
   </div>
-  {{-- @endisset --}}
+  @endif
+  {{-- バリデーションエラー --}}
+  @if ($errors->any())
+  <div class="todo__alert--danger">
+    <ul class="todo__alert--danger-list">
+      @foreach ($errors->all() as $error)
+      <li class="todo__alert--danger-list__item">
+        {{ $error }}
+      </li>
+      @endforeach
+    </ul>
+  </div>
   @endif
 </div>
 
