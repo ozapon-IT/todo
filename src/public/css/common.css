@@ -1,0 +1,16 @@
+.header {
+  background: #000;
+}
+
+.header__inner {
+  padding: 20px 15px; /* 修正前 padding: 18px 8px; */
+  margin: 0 auto; /* 追加 */
+  max-width: 1230px; /* 追加 */
+}
+
+.header__logo {
+  color: #fff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+}
