@@ -30,3 +30,6 @@ Route::post('/todos', [TodoController::class, 'store']);
 
 // todo更新時
 Route::patch('/todos/update', [TodoController::class, 'update']);
+
+// todo削除時
+Route::delete('/todos/delete', [TodoController::class, 'destroy']);
