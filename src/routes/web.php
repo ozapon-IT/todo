@@ -22,6 +22,11 @@ use App\Http\Controllers\TodoController;
 //     return view('index');
 // });
 
+// トップページ表示
 Route::get('/', [TodoController::class, 'index']);
 
+// todo作成時
 Route::post('/todos', [TodoController::class, 'store']);
+
+// todo更新時
+Route::patch('/todos/update', [TodoController::class, 'update']);
