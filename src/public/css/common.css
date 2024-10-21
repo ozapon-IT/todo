@@ -6,6 +6,9 @@
   padding: 20px 15px; /* 修正前 padding: 18px 8px; */
   margin: 0 auto; /* 追加 */
   max-width: 1230px; /* 追加 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header__logo {
@@ -13,4 +16,9 @@
   text-decoration: none;
   font-size: 24px;
   font-weight: bold;
+}
+
+.header__nav-item {
+  color: #fff;
+  text-decoration: none;
 }
