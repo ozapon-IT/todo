@@ -33,3 +33,6 @@ Route::patch('/todos/update', [TodoController::class, 'update']);
 
 // todo削除時
 Route::delete('/todos/delete', [TodoController::class, 'destroy']);
+
+// todo検索時
+Route::get('/todos/search', [TodoController::class, 'search']);

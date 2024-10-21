@@ -16,6 +16,11 @@
       <a class="header__logo" href="/">
         Todo
       </a>
+      <div class="header__nav">
+        <a class="header__nav-item" href="/categories">
+          カテゴリ一覧
+        </a>
+      </div>
     </div>
   </header>
 

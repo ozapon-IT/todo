@@ -1,4 +1,4 @@
-/* メイン */
+/* mainの中 */
 
 /* todo作成成功 */
 
@@ -7,8 +7,10 @@
 } .todo__alert-successに追加 */
 
 .todo__alert--success {
-  padding: 10px 30px; /*  修正前 padding: 10px 24px; */
-  border-color: #badbcc; /* 追加 */
+  padding: 10px 30px;
+  /*  修正前 padding: 10px 24px; */
+  border-color: #badbcc;
+  /* 追加 */
   background-color: rgb(208 231 222);
   color: rgb(9 83 54);
 }
@@ -26,58 +28,44 @@
   margin: 0;
 }
 
-/* コンテンツ */
+/* .todo-contentの中 */
 
 .todo__content {
   margin: 0 auto;
+  /* 修正前 margin: 50px 0; */
   padding: 60px 15px;
+  /* 追加 */
   max-width: 1230px;
+  /*  追加 */
 }
-
-
-.form__title {
-  width: 80%;
-  margin: 15px auto;
-}
-
-/* todo作成フォーム */
 
 .create-form {
   display: flex;
   justify-content: space-between;
+  /* 追加 */
   margin: 0 auto;
-  width: 80%;
+  width: 70%;
   text-align: center;
+  /* 追加 */
 }
 
 .create-form__item {
-  width: 50%;
+  width: 70%;
 }
 
 .create-form__item-input {
   padding: 10px;
+  /* 修正前 padding: 12px 0; */
   width: 100%;
   height: 40px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.create-form__category {
-  width: 20%;
-  margin-right: auto;
-  margin-left: 10px;
-}
-
-.create-form__category-input {
-  padding: 10px;
-  width: 100%;
-  height: 40px;
+  /* 追加 */
   border: 1px solid #ddd;
   border-radius: 3px;
 }
 
 .create-form__button {
   width: 20%;
+  /* 修正前 width: 30%; */
 }
 
 .create-form__button-submit {
@@ -85,69 +73,25 @@
   color: #fff;
   border-radius: 3px;
   padding: 10px;
+  /* 修正前 padding: 8px 0; */
   width: 100%;
+  /* 修正前 width: 70%; */
   height: 40px;
+  /* 追加 */
   border: none;
+  /* 追加 */
   cursor: pointer;
+  /* 追加 */
+  /* display: block; 削除 */
+  /* margin-left: auto; 削除 */
 }
-
-/* todo検索フォーム */
-
-.search-form {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  width: 80%;
-  text-align: center;
-}
-
-.search-form__item {
-  width: 50%;
-}
-
-.search-form__item-input {
-  padding: 10px;
-  width: 100%;
-  height: 40px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.search-form__category {
-  width: 20%;
-  margin-right: auto;
-  margin-left: 10px;
-}
-
-.search-form__category-input {
-  padding: 10px;
-  width: 100%;
-  height: 40px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
-}
-
-.search-form__button {
-  width: 20%;
-}
-
-.search-form__button-submit {
-  background: #000;
-  color: #fff;
-  border-radius: 3px;
-  padding: 10px;
-  width: 100%;
-  height: 40px;
-  border: none;
-  cursor: pointer;
-}
-
-/* todoリスト表示 */
 
 .todo-table {
-  width: 80%;
+  width: 70%;
   margin: 30px auto;
+  /* 修正前 margin: 40px auto;*/
   text-align: left;
+  /* 追加 */
 }
 
 .todo-table__inner {
@@ -156,13 +100,25 @@
 
 .todo-table__row {
   border-bottom: 1px solid #ddd;
+  /* padding: 10px 8px; 削除 */
 }
 
 .todo-table__header {
   text-align: left;
   padding: 12px;
+  /* 修正前 padding: 12px 8px; */
   width: 20%;
+  /* 追加 */
   font-weight: bold;
+  /* 追加 */
+}
+
+/* .todo-table__row .todo-table__item:nth-child(1) {  修正前 */
+.todo-table__item:first-of-type {
+  width: 90%;
+  padding: 12px;
+  /* 追加 */
+  /* display: flex; 削除 */
 }
 
 .update-form {
@@ -171,30 +127,26 @@
   align-items: center;
 }
 
-.todo-table__item:nth-of-type(1) {
-  width: 40%;
-  padding: 12px;
-}
-
-.todo-table__item:nth-of-type(2) {
-  width: 40%;
-  padding: 12px;
-}
-
 .update-form__item {
+  /* display: flex; 削除 */
+  /* align-items: center; 削除 */
   width: 90%;
+  /* 追加 */
   line-height: 50%;
+  /* 追加 */
 }
 
 .update-form__item-input {
   border: none;
   width: 100%;
+  /* 追加 */
   outline: none;
+  /* 追加 */
 }
 
-.todo-table__item:nth-of-type(3) {
+.update-form__button {
+  /* 追加 */
   width: 10%;
-  text-align: center;
 }
 
 .update-form__button-submit {
@@ -203,14 +155,25 @@
   background: #0000ff;
   color: #fff;
   padding: 5px 10px;
+  /* 修正前 padding: 6px 12px; */
   cursor: pointer;
-  width: 75%;
+  /* 追加 */
+  width: 100%;
+  /* 追加 */
+  /* margin-right: 8px; 削除 */
 }
 
-.todo-table__item:nth-of-type(4) {
+/* .todo-table__row .todo-table__item:nth-child(2) { 修正前 */
+.todo-table__item:last-of-type {
   width: 10%;
-  text-align: center;
+  /* text-align: center; 削除 */
 }
+
+.delete-form__button {
+  /* 追加 */
+  width: 85%;
+}
+
 
 .delete-form__button-submit {
   border: none;
@@ -218,6 +181,9 @@
   background: #ff0000;
   color: #fff;
   padding: 5px 10px;
+  /* 修正前 padding: 6px 12px; */
   cursor: pointer;
-  width: 75%;
+  /* 追加 */
+  width: 100%;
+  /* 追加 */
 }

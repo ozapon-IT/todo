@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class TodoRequest extends FormRequest
+class CategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,21 +23,24 @@ class TodoRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'content' => ['required', 'string', 'max:20'],
-            'name' => ['required', 'string', 'max:10'],
+        $rules =  [
+            'name' => ['required', 'string', 'max:10']
         ];
+
+        // カテゴリ作成時のみ'unique'ルールを適用
+        if ($this->route()->getName() === 'categories') {
+            $rules['name'][] = 'unique:categories,name';
+        }
+
+        return $rules;
     }
 
-    public function messages()
-    {
+    public function messages() {
         return [
-            'content.required' => 'Todoを入力してください',
-            'content.string' => 'Todoを文字列で入力してください',
-            'content.max' => 'Todoを20文字以下で入力してください',
             'name.required' => 'カテゴリを入力してください',
             'name.string' => 'カテゴリを文字列で入力してください',
             'name.max' => 'カテゴリを10文字以下で入力してください',
+            'name.unique' => 'カテゴリがすでに存在しています',
         ];
     }
 }
